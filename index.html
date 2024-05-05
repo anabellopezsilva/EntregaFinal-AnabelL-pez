@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Que la suerte elija</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Link de google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+  <!-- Link de font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header>
+  <h1>¡Que la suerte elija!</h1>
+  <p>¿La mejor forma de tomar una decisión? ¡Dejárselo a la suerte!</p>
+</header>
+
+<div class="container">
+  <div class="game">
+    <h2>Tirar Dados</h2>
+
+    <div class="rounds">
+      <label for="roundsInput" class="rounds-label">¿Cuántas rondas jugamos?</label>
+      <br>
+      <input type="number" id="roundsInput" min="1" value="1" class="rounds-input">
+    </div>
+    
+    <div id="resultMessage" style="display:none;">
+      <p id="winnerMessage"></p>
+    </div>
+    <div class="dice">
+      <input type="text" id="player1NameInput" placeholder="Nombre del Jugador 1">
+      <p id="player1Name">Jugador 1</p>
+      <p id="player1Wins">Victorias: 0</p>
+      <img class="img1" src="./images/dice/dice6.png">
+    </div>
+
+    <div class="dice">
+      <input type="text" id="player2NameInput" placeholder="Nombre del Jugador 2">
+      <p id="player2Name">Jugador 2</p>
+      <p id="player2Wins">Victorias: 0</p>
+      <img class="img2" src="./images/dice/dice6.png">
+    </div>
+
+    <div class="button-container">
+      <div class="button-flex-container">
+        <button id="startButton">
+          <i class="fa-solid fa-shuffle"></i> Comenzar Juego
+        </button>
+        <button id="rollButton" style="display:none;">
+          <i class="fa-solid fa-dice"></i> Tirá el Dado
+        </button>
+      </div>
+      <button id="restartButton">
+        <i class="fas fa-redo-alt"></i> Reiniciar Juego
+      </button>
+    </div>
+    
+
+<script src="./js/dice.js"></script>
+<script src="./js/players.js"></script>
+</body>
+</html>
